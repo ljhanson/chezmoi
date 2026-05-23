@@ -1,0 +1,31 @@
+[credential "https://github.com"]
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = !/usr/bin/gh auth git-credential
+[user]
+	name = L.J. Hanson
+	email = ljhanson@users.noreply.github.com
+	signingkey = F1CDF1069E6027E4B8EA5E5D57656E797A89B519
+[credential]
+        helper = !aws codecommit credential-helper $@
+  UseHttpPath = true
+
+[pull]
+        rebase = true
+[fetch]
+        prune = true
+[diff]
+        colorMoved = zebra
+[submodule]
+	recurse = true
+[init]
+	defaultBranch = main
+[push]
+	default = simple
+	autoSetupRemote = true
+[pack]
+	usePathWalk = true
+[color]
+	ui = auto
+[commit]
+	gpgsign = true
